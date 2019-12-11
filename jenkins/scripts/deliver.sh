@@ -24,6 +24,10 @@ echo 'the file ".pidfile".'
 #set +x
 
 set -x
+npm install -g serve
+set +x
+
+set -x
 serve -s build
 set +x
 
