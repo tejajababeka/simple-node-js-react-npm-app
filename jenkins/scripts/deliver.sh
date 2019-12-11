@@ -17,17 +17,17 @@ echo 'can pause running builds of CI/CD applications indefinitely. "npm start"'
 echo 'is followed by another command that retrieves the process ID (PID) value'
 echo 'of the previously run process (i.e. "npm start") and writes this value to'
 echo 'the file ".pidfile".'
+#set -x
+#npm start
+#set +x
+
 set -x
-npm start
+npm install -g serve
 set +x
 
-#set -x
-#npm install -g serve
-#set +x
-
-#set -x
-#serve -s build & sleep 1
-#set +x
+set -x
+serve -l 3000 -s build
+set +x
 
 echo 'Now...'
 echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
