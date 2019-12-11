@@ -28,7 +28,7 @@ npm install -g serve
 set +x
 
 set -x
-serve -s build
+serve -s build & sleep 1
 set +x
 
 echo 'Now...'
